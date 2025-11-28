@@ -8,8 +8,8 @@ export function Header() {
 
         <ul className="flex gap-3 sm:gap-5 text-xs sm:text-base">
           <li className="hover:text-indigo-800 transition">Home</li>
-          <li className="hover:text-indigo-800 transition">Serviços</li>
           <li className="hover:text-indigo-800 transition">Agendar</li>
+          <li className="hover:text-indigo-800 transition">Loja</li>
           <li className="hover:text-indigo-800 transition">Contato</li>
         </ul>
       </nav>
