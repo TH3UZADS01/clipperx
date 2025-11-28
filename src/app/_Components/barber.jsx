@@ -21,7 +21,7 @@ export function Barber() {
     { 
       name: "Barbearia Ribeiro", 
       img: "/B2.jpg",
-      desc: "Excelência em degradê e barba desenhada."
+      desc: "Excelência em degradê e barba e visual moderno"
     },
     { 
       name: "Barbearia Neiva", 
