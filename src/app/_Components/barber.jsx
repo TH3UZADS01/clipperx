@@ -13,23 +13,23 @@ export function Barber() {
   };
 
   const barbers = [
-    { 
-      name: "Barbearia do Zé", 
+    {
+      name: "Barbearia do Zé",
       img: "/B1.jpg",
       desc: "Especializada em cortes clássicos e barba premium."
     },
-    { 
-      name: "Barbearia Ribeiro", 
+    {
+      name: "Barbearia Ribeiro",
       img: "/B2.jpg",
       desc: "Excelência em degradê e barba e visual moderno"
     },
-    { 
-      name: "Barbearia Neiva", 
+    {
+      name: "Barbearia Neiva",
       img: "/B3.jpg",
       desc: "Cortes modernos com acabamento detalhado."
     },
-    { 
-      name: "Barbearia A Banca", 
+    {
+      name: "Barbearia A Banca",
       img: "/B4.jpg",
       desc: "Estilo urbano, fade impecável e atendimento top."
     },
@@ -37,6 +37,7 @@ export function Barber() {
 
   return (
     <section
+      id="Barber"
       className="relative py-28 text-gray-100 bg-cover bg-center"
       style={{ backgroundImage: "url('/bgAbout.png')" }}
     >

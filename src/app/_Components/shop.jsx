@@ -41,6 +41,7 @@ export function Shop() {
 
   return (
     <section
+      id="Shop"
       className="relative py-28 text-gray-100 bg-cover bg-center"
       style={{ backgroundImage: "url('/bgAbout.png')" }}
     >
