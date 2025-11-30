@@ -45,7 +45,7 @@ export function Header() {
             className="hover:text-indigo-800 transition cursor-pointer"
             onClick={() => router.push("/login")}
           >
-            Entra
+            Entrar
           </li>
 
           
