@@ -71,8 +71,25 @@ export default function LoginPage() {
             className="bg-blue-600 text-white p-2 rounded-lg hover:bg-blue-700"
           >
             Entrar
+        
           </button>
         </form>
+
+      {/* BOTÃO DE CADASTRO */}
+      <button
+        className="bg-green-600 text-white p-2 rounded-lg hover:bg-green-700 w-full mt-4"
+        onClick={() => router.push("/cadastro")}
+      >
+        Criar Conta
+      </button>
+
+      {/* TEXTO COM LINK */}
+      <p className="mt-4 text-sm text-center">
+        Não tem conta?{" "}
+        <a href="/cadastro" className="text-blue-600 underline">
+          Criar uma conta
+        </a>
+      </p>
       </div>
     </div>
   );

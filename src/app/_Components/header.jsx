@@ -1,6 +1,8 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 export function Header() {
+  const router = useRouter();
   const scrollTo = (id) => {
     const section = document.getElementById(id);
     if (section) {
@@ -37,6 +39,13 @@ export function Header() {
             onClick={() => scrollTo("Shop")}
           >
             Loja
+          </li>
+
+          <li
+            className="hover:text-indigo-800 transition cursor-pointer"
+            onClick={() => router.push("/login")}
+          >
+            Entra
           </li>
 
           
