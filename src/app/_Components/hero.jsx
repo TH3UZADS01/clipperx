@@ -31,13 +31,15 @@ export function Hero() {
 
         <p
           className="
-            mt-20 text-base sm:text-lg lg:text-2xl font-sans
-            animate-fade-up
-          "
+    mt-20 px-6
+    text-base sm:text-lg lg:text-2xl font-sans
+    animate-fade-up
+  "
         >
           A plataforma moderna para barbearias e clientes que buscam
           praticidade e excelência.
         </p>
+
       </div>
     </section>
   );
