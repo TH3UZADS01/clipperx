@@ -16,7 +16,6 @@ export default function RegisterPage() {
     e.preventDefault();
     setError("");
 
-    // validação simples
     if (password !== confirmPassword) {
       setError("As senhas não são iguais!");
       return;
@@ -34,22 +33,28 @@ export default function RegisterPage() {
       return;
     }
 
-    router.push("/");
+    router.push("/login");
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="bg-white p-8 rounded-xl shadow-lg w-full max-w-sm">
-        <h1 className="text-2xl font-bold mb-5">Criar Conta</h1>
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-black via-[#12081F] to-[#24104F] px-4">
+      
+      <div className="w-full max-w-sm bg-white/10 backdrop-blur-xl border border-white/20 p-8 rounded-2xl shadow-[0_0_25px_rgba(113,92,244,0.4)]">
+        
+        <h1 className="text-3xl font-extrabold text-center text-white mb-6">
+          Criar Conta
+        </h1>
 
-        {error && <p className="text-red-500 mb-3">{error}</p>}
+        {error && (
+          <p className="text-red-400 text-sm mb-3 text-center">{error}</p>
+        )}
 
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
 
           <input
             type="text"
-            placeholder="Nome"
-            className="border p-2 rounded"
+            placeholder="Nome completo"
+            className="p-3 rounded-lg bg-white/5 text-white border border-white/20 placeholder-gray-300 focus:border-purple-400 focus:ring-2 focus:ring-purple-500/30 outline-none"
             value={name}
             onChange={(e) => setName(e.target.value)}
             required
@@ -58,7 +63,7 @@ export default function RegisterPage() {
           <input
             type="email"
             placeholder="E-mail"
-            className="border p-2 rounded"
+            className="p-3 rounded-lg bg-white/5 text-white border border-white/20 placeholder-gray-300 focus:border-purple-400 focus:ring-2 focus:ring-purple-500/30 outline-none"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
@@ -67,7 +72,7 @@ export default function RegisterPage() {
           <input
             type="password"
             placeholder="Senha"
-            className="border p-2 rounded"
+            className="p-3 rounded-lg bg-white/5 text-white border border-white/20 placeholder-gray-300 focus:border-purple-400 focus:ring-2 focus:ring-purple-500/30 outline-none"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
@@ -76,7 +81,7 @@ export default function RegisterPage() {
           <input
             type="password"
             placeholder="Confirmar senha"
-            className="border p-2 rounded"
+            className="p-3 rounded-lg bg-white/5 text-white border border-white/20 placeholder-gray-300 focus:border-purple-400 focus:ring-2 focus:ring-purple-500/30 outline-none"
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
             required
@@ -84,15 +89,19 @@ export default function RegisterPage() {
 
           <button
             type="submit"
-            className="bg-blue-600 text-white p-2 rounded hover:bg-blue-500"
+            className="
+              bg-purple-600 hover:bg-purple-700 
+              transition-all p-3 rounded-lg text-white font-semibold
+              shadow-[0_0_15px_rgba(113,92,244,0.5)]
+            "
           >
             Criar Conta
           </button>
         </form>
 
-        <p className="mt-4 text-sm text-center">
+        <p className="mt-4 text-sm text-center text-gray-300">
           Já tem conta?{" "}
-          <a href="/login" className="text-blue-600 underline">
+          <a href="/login" className="text-purple-400 underline">
             Fazer login
           </a>
         </p>
@@ -100,3 +109,4 @@ export default function RegisterPage() {
     </div>
   );
 }
+
