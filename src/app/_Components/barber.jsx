@@ -2,15 +2,21 @@
 
 import { useRef } from "react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export function Barber() {
   const scrollRef = useRef(null);
+  const router = useRouter();
 
   const scroll = (dir) => {
     if (!scrollRef.current) return;
     const amount = 320;
     scrollRef.current.scrollLeft += dir === "right" ? amount : -amount;
   };
+
+  // Função para criar slug (ex.: "Barbearia do Zé" → "ze")
+  const slug = (name) =>
+    name.toLowerCase().replace("barbearia", "").trim().replace(/ /g, "-");
 
   const barbers = [
     {
@@ -55,10 +61,6 @@ export function Barber() {
         <div className="relative mt-10">
           <div
             ref={scrollRef}
-            style={{
-              scrollbarWidth: "thin",
-              scrollbarColor: "#7c3aed #0000",
-            }}
             className="scrollbar-neon flex gap-8 overflow-x-auto scroll-smooth py-4 px-4 no-scrollbar"
           >
             {barbers.map((barb, i) => (
@@ -66,8 +68,6 @@ export function Barber() {
                 key={i}
                 className="min-w-[270px] bg-white/10 backdrop-blur-xl p-5 rounded-2xl shadow-lg border border-white/10 hover:scale-[1.03] transition"
               >
-
-                {/* IMAGEM — total responsiva e sem px */}
                 <div className="w-full h-40 sm:h-44 md:h-48 lg:h-52 overflow-hidden rounded-xl">
                   <Image
                     src={barb.img}
@@ -87,13 +87,21 @@ export function Barber() {
                 </p>
 
                 <button
+                  onClick={() =>
+                    router.push(
+                      barb.name === "Barbearia do Zé"
+                        ? "/agendamento/ze"
+                        : `/agendamento/${slug(barb.name)}`
+                    )
+                  }
                   className="mt-4 w-full py-2 bg-gradient-to-r from-[#0E063F] to-[#3926B1] 
-                  text-white font-semibold rounded-xl 
-                  hover:scale-105 hover:shadow-[0_0_18px_rgba(113,92,244,0.5)]
-                  transition-all duration-300"
+  text-white font-semibold rounded-xl 
+  hover:scale-105 hover:shadow-[0_0_18px_rgba(113,92,244,0.5)]
+  transition-all duration-300"
                 >
                   Agendar agora
                 </button>
+
 
               </div>
             ))}
