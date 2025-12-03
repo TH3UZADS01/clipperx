@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { ArrowButtons } from "./ArrowButtons";
 
 export function Barber() {
   const scrollRef = useRef(null);
@@ -61,6 +62,10 @@ export function Barber() {
         <div className="relative mt-10">
           <div
             ref={scrollRef}
+            style={{
+              scrollbarWidth: "thin",
+              scrollbarColor: "#7c3aed #0000",
+            }}
             className="scrollbar-neon flex gap-8 overflow-x-auto scroll-smooth py-4 px-4 no-scrollbar"
           >
             {barbers.map((barb, i) => (
@@ -101,7 +106,9 @@ export function Barber() {
                 >
                   Agendar agora
                 </button>
-
+                
+                {/* Setas mobile */}
+                <ArrowButtons scrollRef={scrollRef} />
 
               </div>
             ))}

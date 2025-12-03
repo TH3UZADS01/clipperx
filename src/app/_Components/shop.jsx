@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { ArrowButtons } from "./ArrowButtons";
 
 export function Shop() {
   const scrollRef = useRef(null);
@@ -105,6 +106,9 @@ export function Shop() {
                   >
                     Comprar agora
                   </button>
+
+                  {/* Setas mobile */}
+                  <ArrowButtons scrollRef={scrollRef} />
                 </Link>
               </div>
             ))}
