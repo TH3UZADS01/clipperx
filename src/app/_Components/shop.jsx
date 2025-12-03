@@ -106,10 +106,9 @@ export function Shop() {
                   >
                     Comprar agora
                   </button>
-
-                  {/* Setas mobile */}
-                  <ArrowButtons scrollRef={scrollRef} />
                 </Link>
+                {/* Setas mobile */}
+                <ArrowButtons scrollRef={scrollRef} />
               </div>
             ))}
           </div>
