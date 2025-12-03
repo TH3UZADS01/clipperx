@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export function Shop() {
   const scrollRef = useRef(null);
@@ -18,24 +19,28 @@ export function Shop() {
       img: "/S1.jpg",
       desc: "Aço japonês, precisão profissional.",
       price: "R$ 59,90",
+      link: "/produto/tesoura",
     },
     {
       name: "Máquina Fade Pro",
       img: "/S2.jpg",
       desc: "Corte limpo e silencioso.",
       price: "R$ 199,90",
+      link: "/produto/maquina",
     },
     {
       name: "Pente Gradiente",
       img: "/S3.jpg",
       desc: "Perfeito para fade e topo.",
       price: "R$ 29,90",
+      link: "/produto/pente",
     },
     {
       name: "Balm para Barba",
       img: "/S4.jpg",
       desc: "Hidratação e perfume suave.",
       price: "R$ 39,90",
+      link: "/produto/balm",
     },
   ];
 
@@ -91,14 +96,16 @@ export function Shop() {
                   {item.price}
                 </p>
 
-                <button
-                  className="mt-4 w-full py-2 bg-gradient-to-r from-[#0E063F] to-[#3926B1] 
-                  text-white font-semibold rounded-xl 
-                  hover:scale-105 hover:shadow-[0_0_18px_rgba(113,92,244,0.5)]
-                  transition-all duration-300"
-                >
-                  Comprar agora
-                </button>
+                <Link href={item.link}>
+                  <button
+                    className="mt-4 w-full py-2 bg-gradient-to-r from-[#0E063F] to-[#3926B1] 
+                    text-white font-semibold rounded-xl 
+                    hover:scale-105 hover:shadow-[0_0_18px_rgba(113,92,244,0.5)]
+                    transition-all duration-300"
+                  >
+                    Comprar agora
+                  </button>
+                </Link>
               </div>
             ))}
           </div>
