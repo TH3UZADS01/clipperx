@@ -15,7 +15,6 @@ export default function ProdutoTesoura() {
 
       <div className="relative z-10 bg-white/10 backdrop-blur-xl p-8 rounded-2xl shadow-xl w-full max-w-lg border border-white/20">
 
-        {/* Botão Voltar */}
         <button
           onClick={() => router.push("/")}
           className="mb-4 py-2 px-4 bg-black/40 text-gray-200 rounded-lg hover:bg-black/60 transition"
@@ -23,7 +22,6 @@ export default function ProdutoTesoura() {
           ← Voltar
         </button>
 
-        {/* Header */}
         <div className="text-center">
           <Image
             src="/S1.jpg"
@@ -44,7 +42,6 @@ export default function ProdutoTesoura() {
           <p className="text-indigo-400 font-bold text-xl mt-3">R$ 59,90</p>
         </div>
 
-        {/* Ações */}
         <div className="mt-6 space-y-3">
           <button className="w-full py-3 bg-gradient-to-r from-[#0E063F] to-[#3926B1] text-white font-bold rounded-xl hover:scale-[1.02] transition shadow-lg">
             Comprar Agora

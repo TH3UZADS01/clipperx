@@ -47,7 +47,6 @@ export default function AgendamentoZe() {
           ← Voltar
         </button>
 
-        {/* Header */}
         <div className="text-center">
           <Image
             src="/B1.jpg"
@@ -66,10 +65,8 @@ export default function AgendamentoZe() {
           </p>
         </div>
 
-        {/* Form */}
         <form onSubmit={handleSubmit} className="mt-6 space-y-6">
 
-          {/* Serviços */}
           <div>
             <label className="block mb-2 font-semibold">Escolha o serviço:</label>
             <select
@@ -86,7 +83,6 @@ export default function AgendamentoZe() {
             </select>
           </div>
 
-          {/* Horários */}
           <div>
             <label className="block mb-2 font-semibold">Horário:</label>
             <div className="grid grid-cols-3 gap-3">
@@ -106,7 +102,6 @@ export default function AgendamentoZe() {
             </div>
           </div>
 
-          {/* Botão Final */}
           <button
             type="submit"
             className="w-full py-3 bg-gradient-to-r from-[#0E063F] to-[#3926B1] text-white font-bold rounded-xl hover:scale-[1.02] transition shadow-lg"

@@ -76,7 +76,6 @@ export function Shop() {
                 key={i}
                 className="min-w-[270px] bg-white/10 backdrop-blur-xl p-5 rounded-2xl shadow-lg border border-white/10 hover:scale-[1.03] transition"
               >
-                {/* IMAGEM */}
                 <div className="w-full h-40 sm:h-44 md:h-48 lg:h-52 overflow-hidden rounded-xl">
                   <Image
                     src={item.img}
@@ -107,7 +106,7 @@ export function Shop() {
                     Comprar agora
                   </button>
                 </Link>
-                {/* Setas mobile */}
+
                 <ArrowButtons scrollRef={scrollRef} />
               </div>
             ))}

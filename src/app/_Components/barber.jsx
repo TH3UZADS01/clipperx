@@ -15,7 +15,6 @@ export function Barber() {
     scrollRef.current.scrollLeft += dir === "right" ? amount : -amount;
   };
 
-  // Função para criar slug (ex.: "Barbearia do Zé" → "ze")
   const slug = (name) =>
     name.toLowerCase().replace("barbearia", "").trim().replace(/ /g, "-");
 
@@ -100,14 +99,13 @@ export function Barber() {
                     )
                   }
                   className="mt-4 w-full py-2 bg-gradient-to-r from-[#0E063F] to-[#3926B1] 
-  text-white font-semibold rounded-xl 
-  hover:scale-105 hover:shadow-[0_0_18px_rgba(113,92,244,0.5)]
-  transition-all duration-300"
+                  text-white font-semibold rounded-xl 
+                  hover:scale-105 hover:shadow-[0_0_18px_rgba(113,92,244,0.5)]
+                  transition-all duration-300"
                 >
                   Agendar agora
                 </button>
-                
-                {/* Setas mobile */}
+
                 <ArrowButtons scrollRef={scrollRef} />
 
               </div>

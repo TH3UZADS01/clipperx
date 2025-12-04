@@ -14,7 +14,7 @@ export function Hero() {
       "
       style={{ backgroundImage: "url('/Bg.jpg')" }}
     >
-      {/* Overlay atrás do texto */}
+
       <div className="absolute inset-0 bg-black/60 animate-bg-fade -z-10"></div>
 
       <div className="text-center">
@@ -31,9 +31,9 @@ export function Hero() {
 
         <p
           className="
-    mt-20 px-6
-    text-base sm:text-lg lg:text-2xl font-sans
-    animate-fade-up
+          mt-20 px-6
+          text-base sm:text-lg lg:text-2xl font-sans
+          animate-fade-up
   "
         >
           A plataforma moderna para barbearias e clientes que buscam

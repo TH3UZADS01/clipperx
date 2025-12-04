@@ -31,7 +31,6 @@ export default function Carrinho() {
 
       <div className="relative z-10 bg-white/10 backdrop-blur-xl p-8 rounded-2xl shadow-xl w-full max-w-2xl border border-white/20">
 
-        {/* BOTÃO VOLTAR */}
         <Link
           href="/"
           className="inline-block mb-4 px-4 py-2 bg-white/10 rounded-lg border border-white/20 hover:bg-white/20 transition"
@@ -39,7 +38,6 @@ export default function Carrinho() {
           ← Voltar para Home
         </Link>
 
-        {/* TÍTULO */}
         <h1 className="text-3xl font-extrabold text-center mix-blend-color-dodge">
           Carrinho
         </h1>
@@ -48,7 +46,6 @@ export default function Carrinho() {
           Itens selecionados para compra
         </p>
 
-        {/* LISTA DE ITENS */}
         <div className="mt-6 space-y-4">
           {items.map((item, i) => (
             <div
@@ -78,14 +75,12 @@ export default function Carrinho() {
           ))}
         </div>
 
-        {/* TOTAL */}
         <div className="mt-6 text-center">
           <p className="text-xl font-bold text-indigo-400">
             Total: R$ {total.toFixed(2)}
           </p>
         </div>
 
-        {/* BOTÕES */}
         <div className="mt-6 flex flex-col gap-4">
           <button
             className="w-full py-3 bg-gradient-to-r from-[#0E063F] to-[#3926B1] text-white font-bold rounded-xl hover:scale-[1.02] transition shadow-lg"

@@ -37,7 +37,7 @@ export default function LoginPage() {
         text-white px-4
       "
     >
-      {/* CARD */}
+
       <div
         className="
           w-full max-w-sm p-8 rounded-2xl backdrop-blur-xl
@@ -52,7 +52,6 @@ export default function LoginPage() {
           Entrar na sua conta
         </h2>
 
-        {/* FORM */}
         <form onSubmit={handleLogin} className="flex flex-col space-y-5">
           <div className="flex flex-col space-y-2">
             <label className="text-sm text-gray-300">Email</label>
@@ -95,7 +94,6 @@ export default function LoginPage() {
           </button>
         </form>
 
-        {/* LINK DE CADASTRO */}
         <p className="mt-5 text-sm text-center text-gray-300">
           Não tem conta?{" "}
           <a

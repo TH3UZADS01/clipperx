@@ -147,7 +147,6 @@
   }
 }
 
-/* SCROLL NEON */
 .neon-scroll::-webkit-scrollbar {
   height: 8px;
 }
@@ -168,11 +167,6 @@
   box-shadow: 0 0 18px rgba(113, 92, 244, 1);
 }
 
-/* ---------------------------
-   Animações do Hero
-   --------------------------- */
-
-/* overlay: começa escuro, vai clareando */
 @keyframes bgFade {
   0% {
     background-color: rgba(0, 0, 0, 0.85);
@@ -191,7 +185,6 @@
   animation: bgFade 2.2s cubic-bezier(.22, .9, .3, 1) forwards;
 }
 
-/* título desce suavemente */
 @keyframes slideDown {
   0% {
     opacity: 0;
@@ -214,7 +207,6 @@
   animation-delay: 0.12s;
 }
 
-/* parágrafo sobe e aparece */
 @keyframes fadeUp {
   0% {
     opacity: 0;
@@ -232,10 +224,8 @@
   animation-delay: 0.38s;
 }
 
-/* se quiser um leve brilho extra no texto (opcional) */
 .mix-blend-color-dodge {
   mix-blend-mode: color-dodge;
-  /* fallback: drop shadow suave para reforçar contraste */
   filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.45));
 }
 
